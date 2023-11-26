@@ -54,7 +54,7 @@ const spec = JSON.parse(
 app.use('/api/docs', swaggerUI.serve, swaggerUI.setup(spec, options));
 
 // TODO: Replace with API URL
-const apiHandler = RestApiHandler({ endpoint: 'http://localhost:3000/api' });
+const apiHandler = RestApiHandler({ endpoint: `${process.env.HOST}/api` });
 
 app.use(
     '/api',
