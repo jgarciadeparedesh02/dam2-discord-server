@@ -494,7 +494,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "patch": {
         "operationId": "update-User-patch",
@@ -547,7 +548,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "delete": {
         "operationId": "delete-User",
@@ -584,7 +586,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/user/{id}/chats": {
@@ -931,7 +934,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/user/{id}/relationships/chats": {
@@ -1329,7 +1333,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "patch": {
         "operationId": "update-User-relationship-chats-patch",
@@ -1382,7 +1387,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "post": {
         "operationId": "create-User-relationship-chats",
@@ -1435,7 +1441,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/message": {
@@ -1754,7 +1761,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "post": {
         "operationId": "create-Message",
@@ -1792,7 +1800,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/message/{id}": {
@@ -1841,7 +1850,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "put": {
         "operationId": "update-Message-put",
@@ -1894,7 +1904,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "patch": {
         "operationId": "update-Message-patch",
@@ -1947,7 +1958,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "delete": {
         "operationId": "delete-Message",
@@ -1984,7 +1996,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/message/{id}/chat": {
@@ -2033,7 +2046,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/message/{id}/relationships/chat": {
@@ -2079,7 +2093,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "put": {
         "operationId": "update-Message-relationship-chat-put",
@@ -2132,7 +2147,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "patch": {
         "operationId": "update-Message-relationship-chat-patch",
@@ -2185,7 +2201,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/chat": {
@@ -2354,14 +2371,17 @@
             }
           },
           {
-            "name": "filter[user]",
+            "name": "filter[users]",
             "required": false,
-            "description": "Equality filter for \"user\"",
+            "description": "Equality filter for \"users\"",
             "in": "query",
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           }
         ],
@@ -2386,7 +2406,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "post": {
         "operationId": "create-Chat",
@@ -2424,7 +2445,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/chat/{id}": {
@@ -2473,7 +2495,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "put": {
         "operationId": "update-Chat-put",
@@ -2526,7 +2549,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "patch": {
         "operationId": "update-Chat-patch",
@@ -2579,7 +2603,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "delete": {
         "operationId": "delete-Chat",
@@ -2616,7 +2641,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/chat/{id}/messages": {
@@ -2788,14 +2814,17 @@
             }
           },
           {
-            "name": "filter[user]",
+            "name": "filter[users]",
             "required": false,
-            "description": "Equality filter for \"user\"",
+            "description": "Equality filter for \"users\"",
             "in": "query",
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           }
         ],
@@ -2830,7 +2859,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
     "/api/chat/{id}/relationships/messages": {
@@ -2999,14 +3029,17 @@
             }
           },
           {
-            "name": "filter[user]",
+            "name": "filter[users]",
             "required": false,
-            "description": "Equality filter for \"user\"",
+            "description": "Equality filter for \"users\"",
             "in": "query",
             "style": "form",
             "explode": false,
             "schema": {
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           }
         ],
@@ -3041,7 +3074,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "put": {
         "operationId": "update-Chat-relationship-messages-put",
@@ -3094,7 +3128,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "patch": {
         "operationId": "update-Chat-relationship-messages-patch",
@@ -3147,7 +3182,8 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "post": {
         "operationId": "create-Chat-relationship-messages",
@@ -3200,13 +3236,14 @@
               }
             }
           }
-        }
+        },
+        "security": []
       }
     },
-    "/api/chat/{id}/user": {
+    "/api/chat/{id}/users": {
       "get": {
-        "operationId": "fetch-Chat-related-user",
-        "description": "Fetch the related \"user\" resource for \"Chat\"",
+        "operationId": "fetch-Chat-related-users",
+        "description": "Fetch the related \"users\" resource for \"Chat\"",
         "tags": [
           "chat"
         ],
@@ -3216,6 +3253,174 @@
           },
           {
             "$ref": "#/components/parameters/include"
+          },
+          {
+            "$ref": "#/components/parameters/sort"
+          },
+          {
+            "$ref": "#/components/parameters/page-offset"
+          },
+          {
+            "$ref": "#/components/parameters/page-limit"
+          },
+          {
+            "name": "filter[id]",
+            "required": false,
+            "description": "Id filter",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter[createdAt]",
+            "required": false,
+            "description": "Equality filter for \"createdAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[createdAt$lt]",
+            "required": false,
+            "description": "Less-than filter for \"createdAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[createdAt$lte]",
+            "required": false,
+            "description": "Less-than or equal filter for \"createdAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[createdAt$gt]",
+            "required": false,
+            "description": "Greater-than filter for \"createdAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[createdAt$gte]",
+            "required": false,
+            "description": "Greater-than or equal filter for \"createdAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[updatedAt]",
+            "required": false,
+            "description": "Equality filter for \"updatedAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[updatedAt$lt]",
+            "required": false,
+            "description": "Less-than filter for \"updatedAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[updatedAt$lte]",
+            "required": false,
+            "description": "Less-than or equal filter for \"updatedAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[updatedAt$gt]",
+            "required": false,
+            "description": "Greater-than filter for \"updatedAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[updatedAt$gte]",
+            "required": false,
+            "description": "Greater-than or equal filter for \"updatedAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[messages]",
+            "required": false,
+            "description": "Equality filter for \"messages\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "filter[users]",
+            "required": false,
+            "description": "Equality filter for \"users\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           }
         ],
         "responses": {
@@ -3224,7 +3429,7 @@
             "content": {
               "application/vnd.api+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserResponse"
+                  "$ref": "#/components/schemas/UserListResponse"
                 }
               }
             }
@@ -3253,16 +3458,184 @@
         "security": []
       }
     },
-    "/api/chat/{id}/relationships/user": {
+    "/api/chat/{id}/relationships/users": {
       "get": {
-        "operationId": "fetch-Chat-relationship-user",
-        "description": "Fetch the \"user\" relationships for a \"Chat\"",
+        "operationId": "fetch-Chat-relationship-users",
+        "description": "Fetch the \"users\" relationships for a \"Chat\"",
         "tags": [
           "chat"
         ],
         "parameters": [
           {
             "$ref": "#/components/parameters/id"
+          },
+          {
+            "$ref": "#/components/parameters/sort"
+          },
+          {
+            "$ref": "#/components/parameters/page-offset"
+          },
+          {
+            "$ref": "#/components/parameters/page-limit"
+          },
+          {
+            "name": "filter[id]",
+            "required": false,
+            "description": "Id filter",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter[createdAt]",
+            "required": false,
+            "description": "Equality filter for \"createdAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[createdAt$lt]",
+            "required": false,
+            "description": "Less-than filter for \"createdAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[createdAt$lte]",
+            "required": false,
+            "description": "Less-than or equal filter for \"createdAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[createdAt$gt]",
+            "required": false,
+            "description": "Greater-than filter for \"createdAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[createdAt$gte]",
+            "required": false,
+            "description": "Greater-than or equal filter for \"createdAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[updatedAt]",
+            "required": false,
+            "description": "Equality filter for \"updatedAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[updatedAt$lt]",
+            "required": false,
+            "description": "Less-than filter for \"updatedAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[updatedAt$lte]",
+            "required": false,
+            "description": "Less-than or equal filter for \"updatedAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[updatedAt$gt]",
+            "required": false,
+            "description": "Greater-than filter for \"updatedAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[updatedAt$gte]",
+            "required": false,
+            "description": "Greater-than or equal filter for \"updatedAt\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "filter[messages]",
+            "required": false,
+            "description": "Equality filter for \"messages\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "filter[users]",
+            "required": false,
+            "description": "Equality filter for \"users\"",
+            "in": "query",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           }
         ],
         "responses": {
@@ -3271,7 +3644,7 @@
             "content": {
               "application/vnd.api+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/_toOneRelationshipResponse"
+                  "$ref": "#/components/schemas/_toManyRelationshipResponse"
                 }
               }
             }
@@ -3296,11 +3669,12 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "put": {
-        "operationId": "update-Chat-relationship-user-put",
-        "description": "Update \"user\" relationship for a \"Chat\"",
+        "operationId": "update-Chat-relationship-users-put",
+        "description": "Update \"users\" relationships for a \"Chat\"",
         "tags": [
           "chat"
         ],
@@ -3313,7 +3687,7 @@
           "content": {
             "application/vnd.api+json": {
               "schema": {
-                "$ref": "#/components/schemas/_toOneRelationshipRequest"
+                "$ref": "#/components/schemas/_toManyRelationshipRequest"
               }
             }
           }
@@ -3324,7 +3698,7 @@
             "content": {
               "application/vnd.api+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/_toOneRelationshipResponse"
+                  "$ref": "#/components/schemas/_toManyRelationshipResponse"
                 }
               }
             }
@@ -3349,11 +3723,12 @@
               }
             }
           }
-        }
+        },
+        "security": []
       },
       "patch": {
-        "operationId": "update-Chat-relationship-user-patch",
-        "description": "Update \"user\" relationship for a \"Chat\"",
+        "operationId": "update-Chat-relationship-users-patch",
+        "description": "Update \"users\" relationships for a \"Chat\"",
         "tags": [
           "chat"
         ],
@@ -3366,7 +3741,7 @@
           "content": {
             "application/vnd.api+json": {
               "schema": {
-                "$ref": "#/components/schemas/_toOneRelationshipRequest"
+                "$ref": "#/components/schemas/_toManyRelationshipRequest"
               }
             }
           }
@@ -3377,7 +3752,7 @@
             "content": {
               "application/vnd.api+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/_toOneRelationshipResponse"
+                  "$ref": "#/components/schemas/_toManyRelationshipResponse"
                 }
               }
             }
@@ -3402,7 +3777,62 @@
               }
             }
           }
-        }
+        },
+        "security": []
+      },
+      "post": {
+        "operationId": "create-Chat-relationship-users",
+        "description": "Create new \"users\" relationships for a \"Chat\"",
+        "tags": [
+          "chat"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/vnd.api+json": {
+              "schema": {
+                "$ref": "#/components/schemas/_toManyRelationshipRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/_toManyRelationshipResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Request is forbidden",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/_errorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource is not found",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/_errorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": []
       }
     }
   },
@@ -4261,9 +4691,6 @@
               "updatedAt": {
                 "type": "string",
                 "format": "date-time"
-              },
-              "userId": {
-                "type": "string"
               }
             }
           },
@@ -4273,8 +4700,8 @@
               "messages": {
                 "$ref": "#/components/schemas/_toManyRelationshipWithLinks"
               },
-              "user": {
-                "$ref": "#/components/schemas/_toOneRelationshipWithLinks"
+              "users": {
+                "$ref": "#/components/schemas/_toManyRelationshipWithLinks"
               }
             }
           }
@@ -4301,8 +4728,7 @@
               "attributes": {
                 "type": "object",
                 "required": [
-                  "updatedAt",
-                  "userId"
+                  "updatedAt"
                 ],
                 "properties": {
                   "createdAt": {
@@ -4312,9 +4738,6 @@
                   "updatedAt": {
                     "type": "string",
                     "format": "date-time"
-                  },
-                  "userId": {
-                    "type": "string"
                   }
                 }
               },
@@ -4324,8 +4747,8 @@
                   "messages": {
                     "$ref": "#/components/schemas/_toManyRelationship"
                   },
-                  "user": {
-                    "$ref": "#/components/schemas/_toOneRelationship"
+                  "users": {
+                    "$ref": "#/components/schemas/_toManyRelationship"
                   }
                 }
               }
@@ -4368,9 +4791,6 @@
                   "updatedAt": {
                     "type": "string",
                     "format": "date-time"
-                  },
-                  "userId": {
-                    "type": "string"
                   }
                 }
               },
@@ -4380,8 +4800,8 @@
                   "messages": {
                     "$ref": "#/components/schemas/_toManyRelationship"
                   },
-                  "user": {
-                    "$ref": "#/components/schemas/_toOneRelationship"
+                  "users": {
+                    "$ref": "#/components/schemas/_toManyRelationship"
                   }
                 }
               }
@@ -4416,8 +4836,8 @@
                       "messages": {
                         "$ref": "#/components/schemas/_toManyRelationship"
                       },
-                      "user": {
-                        "$ref": "#/components/schemas/_toOneRelationship"
+                      "users": {
+                        "$ref": "#/components/schemas/_toManyRelationship"
                       }
                     }
                   }
@@ -4466,8 +4886,8 @@
                         "messages": {
                           "$ref": "#/components/schemas/_toManyRelationship"
                         },
-                        "user": {
-                          "$ref": "#/components/schemas/_toOneRelationship"
+                        "users": {
+                          "$ref": "#/components/schemas/_toManyRelationship"
                         }
                       }
                     }
